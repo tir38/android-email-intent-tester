@@ -15,30 +15,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/action" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
+            <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/none_radio_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/none" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
+            <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/action_send_radio_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/action_send" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
+            <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/action_send_to_radio_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/action_sendto" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
+            <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/action_send_multiple_radio_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,37 +50,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/type_or_data" />
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:text="@string/type_data_message"
                 android:textStyle="italic" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
+            <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/none_type_radio_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/none" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
+            <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/type_text_plain_radio_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/type_text_plain" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
+            <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/type_asterisk_radio_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/type_asktersik" />
 
-            <androidx.appcompat.widget.AppCompatRadioButton
+            <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/data_mailto_radio_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

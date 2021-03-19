@@ -6,11 +6,11 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatButton
-import androidx.appcompat.widget.AppCompatCheckBox
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.checkbox.MaterialCheckBox
 import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.textview.MaterialTextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,33 +18,36 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        copyAssets(applicationContext)
+
         setContentView(R.layout.activity_main)
 
-        findViewById<AppCompatCheckBox>(R.id.extra_email_checkbox)
+        findViewById<MaterialCheckBox>(R.id.extra_email_checkbox)
             .setOnCheckedChangeListener { _, isChecked ->
-                findViewById<AppCompatCheckBox>(R.id.extra_email_in_array_checkbox).isEnabled =
+                findViewById<MaterialCheckBox>(R.id.extra_email_in_array_checkbox).isEnabled =
                     isChecked
             }
 
-        findViewById<AppCompatCheckBox>(R.id.extra_cc_checkbox)
+        findViewById<MaterialCheckBox>(R.id.extra_cc_checkbox)
             .setOnCheckedChangeListener { _, isChecked ->
-                findViewById<AppCompatCheckBox>(R.id.extra_cc_in_array_checkbox).isEnabled =
+                findViewById<MaterialCheckBox>(R.id.extra_cc_in_array_checkbox).isEnabled =
                     isChecked
             }
 
-        findViewById<AppCompatCheckBox>(R.id.extra_bcc_checkbox)
+        findViewById<MaterialCheckBox>(R.id.extra_bcc_checkbox)
             .setOnCheckedChangeListener { _, isChecked ->
-                findViewById<AppCompatCheckBox>(R.id.extra_bcc_in_array_checkbox).isEnabled =
+                findViewById<MaterialCheckBox>(R.id.extra_bcc_in_array_checkbox).isEnabled =
                     isChecked
             }
 
-        findViewById<AppCompatButton>(R.id.generate_button).setOnClickListener {
+        findViewById<MaterialButton>(R.id.generate_button).setOnClickListener {
             generatedIntent = buildIntentFromSettings()
-            findViewById<AppCompatTextView>(R.id.output_textview).text =
+            findViewById<MaterialTextView>(R.id.output_textview).text =
                 intentAsReadableString(generatedIntent)
         }
 
-        findViewById<AppCompatButton>(R.id.fire_intent_button).setOnClickListener {
+        findViewById<MaterialButton>(R.id.fire_intent_button).setOnClickListener {
             try {
                 generatedIntent?.let { startActivity(it) }
             } catch (exception: Exception) {
@@ -123,10 +126,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun putExtras(initialIntent: Intent): Intent {
-        if (findViewById<AppCompatCheckBox>(R.id.extra_email_checkbox).isChecked) {
+        if (findViewById<MaterialCheckBox>(R.id.extra_email_checkbox).isChecked) {
             val email = "bob@example.com"
             val emailValue =
-                if (findViewById<AppCompatCheckBox>(R.id.extra_email_in_array_checkbox).isChecked) {
+                if (findViewById<MaterialCheckBox>(R.id.extra_email_in_array_checkbox).isChecked) {
                     arrayOf(email)
                 } else {
                     email
@@ -134,10 +137,10 @@ class MainActivity : AppCompatActivity() {
             initialIntent.putExtra(EXTRA_EMAIL, emailValue)
         }
 
-        if (findViewById<AppCompatCheckBox>(R.id.extra_cc_checkbox).isChecked) {
+        if (findViewById<MaterialCheckBox>(R.id.extra_cc_checkbox).isChecked) {
             val email = "alice@example.com"
             val emailValue =
-                if (findViewById<AppCompatCheckBox>(R.id.extra_cc_in_array_checkbox).isChecked) {
+                if (findViewById<MaterialCheckBox>(R.id.extra_cc_in_array_checkbox).isChecked) {
                     arrayOf(email)
                 } else {
                     email
@@ -145,10 +148,10 @@ class MainActivity : AppCompatActivity() {
             initialIntent.putExtra(EXTRA_CC, emailValue)
         }
 
-        if (findViewById<AppCompatCheckBox>(R.id.extra_bcc_checkbox).isChecked) {
+        if (findViewById<MaterialCheckBox>(R.id.extra_bcc_checkbox).isChecked) {
             val email = "carl@example.com"
             val emailValue =
-                if (findViewById<AppCompatCheckBox>(R.id.extra_bcc_in_array_checkbox).isChecked) {
+                if (findViewById<MaterialCheckBox>(R.id.extra_bcc_in_array_checkbox).isChecked) {
                     arrayOf(email)
                 } else {
                     email
@@ -156,15 +159,18 @@ class MainActivity : AppCompatActivity() {
             initialIntent.putExtra(EXTRA_BCC, emailValue)
         }
 
-        if (findViewById<AppCompatCheckBox>(R.id.extra_subject_checkbox).isChecked) {
+        if (findViewById<MaterialCheckBox>(R.id.extra_subject_checkbox).isChecked) {
             initialIntent.putExtra(EXTRA_SUBJECT, "This is a test subject...")
         }
 
-        if (findViewById<AppCompatCheckBox>(R.id.extra_text_checkbox).isChecked) {
+        if (findViewById<MaterialCheckBox>(R.id.extra_text_checkbox).isChecked) {
             initialIntent.putExtra(EXTRA_TEXT, "This is the body of the message...")
         }
-        if (findViewById<AppCompatCheckBox>(R.id.extra_stream_checkbox).isChecked) {
-            initialIntent.putExtra(EXTRA_STREAM, "This is the body of the message...")
+        if (findViewById<MaterialCheckBox>(R.id.extra_stream_checkbox).isChecked) {
+            initialIntent.putExtra(EXTRA_STREAM, generateUriFromImage(applicationContext))
+            initialIntent.addFlags(
+                FLAG_GRANT_READ_URI_PERMISSION or FLAG_GRANT_WRITE_URI_PERMISSION
+            )
         }
 
         return initialIntent

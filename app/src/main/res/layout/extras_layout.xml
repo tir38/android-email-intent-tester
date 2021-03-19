@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/extras_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/extras" />
 
     <!-- email -->
-    <CheckBox
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/extra_email_checkbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/extra_email" />
 
-    <CheckBox
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/extra_email_in_array_checkbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,13 +23,13 @@
         android:text="@string/in_string_array" />
 
     <!--CC -->
-    <CheckBox
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/extra_cc_checkbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/extra_cc" />
 
-    <CheckBox
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/extra_cc_in_array_checkbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,13 +38,13 @@
         android:text="@string/in_string_array" />
 
     <!--BCC -->
-    <CheckBox
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/extra_bcc_checkbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/extra_bcc" />
 
-    <CheckBox
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/extra_bcc_in_array_checkbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,21 +53,21 @@
         android:text="@string/in_string_array" />
 
     <!-- subject -->
-    <CheckBox
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/extra_subject_checkbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/extra_subject" />
 
     <!-- text-->
-    <CheckBox
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/extra_text_checkbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/extra_text" />
 
     <!-- stream -->
-    <CheckBox
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/extra_stream_checkbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
