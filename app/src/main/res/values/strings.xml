@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Email Intent Tester</string>
+    <string name="generate_intent">Generate Intent</string>
+    <string name="fire_intent">Fire Intent</string>
+    <string name="output">Output</string>
+    <string name="action_send">ACTION_SEND</string>
+    <string name="action_sendto">ACTION_SENDTO</string>
+    <string name="action">Action</string>
+    <string name="none">none</string>
+    <string name="action_send_multiple">ACTION_SEND_MULTIPLE</string>
+    <string name="mime_type">MIME Type</string>
+    <string name="type_text_plain">Type: text/plain</string>
+    <string name="type_asktersik">Type: */*</string>
+    <string name="type_or_data">Type or Data</string>
+    <string name="extra_email">EXTRA_EMAIL</string>
+    <string name="extras">Extras</string>
+    <string name="extra_subject">EXTRA_SUBJECT</string>
+    <string name="extra_text">EXTRA_TEXT</string>
+    <string name="in_string_array">in String Array</string>
+    <string name="extra_cc">EXTRA_CC</string>
+    <string name="extra_bcc">EXTRA_BCC</string>
+    <string name="type_data_message">Setting data or type overwrites the other, unless using setDataAndType(), which we are not doing here.</string>
+    <string name="data_mail_to">Data: Uri.parse(\"mailto:\")</string>
+    <string name="extra_stream">EXTRA_STREAM</string>
+</resources>

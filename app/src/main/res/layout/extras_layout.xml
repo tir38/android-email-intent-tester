@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/extras_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/extras" />
+
+    <!-- email -->
+    <CheckBox
+        android:id="@+id/extra_email_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/extra_email" />
+
+    <CheckBox
+        android:id="@+id/extra_email_in_array_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:enabled="false"
+        android:text="@string/in_string_array" />
+
+    <!--CC -->
+    <CheckBox
+        android:id="@+id/extra_cc_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/extra_cc" />
+
+    <CheckBox
+        android:id="@+id/extra_cc_in_array_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:enabled="false"
+        android:text="@string/in_string_array" />
+
+    <!--BCC -->
+    <CheckBox
+        android:id="@+id/extra_bcc_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/extra_bcc" />
+
+    <CheckBox
+        android:id="@+id/extra_bcc_in_array_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:enabled="false"
+        android:text="@string/in_string_array" />
+
+    <!-- subject -->
+    <CheckBox
+        android:id="@+id/extra_subject_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/extra_subject" />
+
+    <!-- text-->
+    <CheckBox
+        android:id="@+id/extra_text_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/extra_text" />
+
+    <!-- stream -->
+    <CheckBox
+        android:id="@+id/extra_stream_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/extra_stream" />
+
+</merge>
