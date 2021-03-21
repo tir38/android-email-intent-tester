@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Email Intent Tester</string>
     <string name="generate_intent">Generate Intent</string>
-    <string name="fire_intent">Fire Intent</string>
+    <string name="broadcast_intent">Broadcast Intent</string>
     <string name="output">Output</string>
     <string name="action_send">ACTION_SEND</string>
     <string name="action_sendto">ACTION_SENDTO</string>
